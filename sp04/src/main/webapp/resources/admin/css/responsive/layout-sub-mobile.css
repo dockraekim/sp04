@@ -1,0 +1,476 @@
+@media (max-width: 992px){
+
+.locatoin{
+ border-top:0px solid #d2d2d2;
+ border-bottom: 1px solid #eee;
+ width: 100%;
+ height:50px;
+ margin-top: 55px;
+
+}
+.locatoin > div{
+ padding: 0!important;
+
+}
+.locatoin .span{
+ display: block;
+ min-width: 50px;
+ float: left;
+
+}
+.locatoin .span:first-child{
+ border-left:1px solid #eee;
+ line-height: 50px;
+text-align: center;
+ cursor: pointer;
+ display: none;
+
+}
+.locatoin .span.select{
+ height: 50px;
+ position: relative;
+ width: 120px;
+}
+.locatoin #select-div-1{
+	margin-left: -1px;
+	}
+.locatoin .span.select a{
+ display: none;
+ height: 49px;
+ line-height: 50px;
+ padding: 0 15px;
+ border-left: 1px solid #eee;
+ border-right:1px solid #eee;
+ border-bottom: 0px solid #eee;
+ min-width: 120px;
+ overflow: hidden;
+ position: relative;
+ color:#646672;
+ background-color: transparent;
+ cursor: pointer;
+ text-decoration: none;
+ font-size: 12px;
+
+}
+.locatoin .span.select a:hover{
+background-color: #eee;
+ text-decoration-line:underline
+}
+.locatoin .span.select > div{
+ height: 50px;
+ overflow: hidden
+}
+.locatoin .span.select > div.on{
+ height: auto;
+ overflow: hidden;
+ position: absolute;
+ z-index: 5;
+	border-bottom: 1px solid #ddd;
+}
+.locatoin .span.select a.active{
+ position: absolute;
+ top:0;
+ font-weight: 600;
+ z-index: 2;
+display: block;
+}
+.locatoin .span.select > div.on  a.active{
+ position: relative;
+ top:auto;
+ font-weight: normal;
+height: 50px;
+}
+.locatoin .span.select > div.on a {
+display: block;	
+	background-color: #fff;
+	border-bottom: 1px solid #eee
+	}
+.locatoin .span.select > div.on a:hover {
+display: block;	
+	background-color: #eee;
+	}
+.locatoin .span.select a i{
+ position: absolute;
+ right:10px;
+ height: 50px;
+ line-height: 50px;
+transform: rotate(0deg) ;
+transition: transform .3s;
+ 
+}
+.locatoin .span.select a:hover i{
+transform: rotate(270deg) ;
+transition: transform .3s;
+ 
+}
+
+.locatoin .print {
+ padding-right: 15px;
+
+}
+.locatoin .print i,.locatoin i.xi-home{
+ cursor: pointer
+}
+.locatoin .print span{
+ display: block;
+ float:right;
+ height: 49px;
+ line-height: 50px;
+ width: 50px;
+ text-align: center;
+ cursor: pointer
+}
+.locatoin .print span.line{
+ background-color: #d2d2d2;
+ width: 1px;
+ height: 10px;
+ margin-top: 20px;
+	display: none;
+
+}
+.locatoin .print span:first-child{
+ margin-right: -20px;
+	display: none;
+
+}
+
+.sub-page .title{
+ height:77px;
+ text-align: center;
+ padding-top: 25px;
+ position: relative
+}
+.sub-page .title h3{
+ font-family:'NanumSquare', sans-serif !important;
+ font-size: 20px;
+ font-weight: 900;
+ color:#646871;
+ letter-spacing: -1px;
+ margin: 0;
+
+}
+.sub-page .title span.line{
+ display:block;
+ height: 30px;
+ width: 1px;
+ position: absolute;
+ left: 50%;
+ background-color: #ccc;
+ margin-top: 15px;
+z-index: 2;
+ opacity: .7
+}
+.sub-page .img{
+ background-color: #000;
+ width: 100%;
+ height: 390px;
+
+}
+.sub-page .title .prev h3 a,.sub-page .title .next h3 a{
+ font-size: 18px;
+ color:#bbbdc0;
+  font-family:'NanumSquare', sans-serif !important;
+ text-decoration: none;
+
+}
+.sub-page .title .next{
+ position: absolute;
+ right:40px;
+ background: url(../../../img/layout/sub/arr-bg-next.jpg) no-repeat right bottom;
+ padding-right: 35px;
+ padding-bottom: 15px;
+ bottom: 35px;
+ display: none;
+
+}
+.sub-page .title .prev{
+ position: absolute;
+ left:40px;
+ background: url(../../../img/layout/sub/arr-bg-prev.jpg) no-repeat left bottom;
+ padding-left: 35px;
+ padding-bottom: 15px;
+ bottom: 35px;
+ display: none;
+
+}
+
+.sub-page .img{
+ background-color: #000;
+ width: 100%;
+ height: 165px;
+ text-align: center;
+ position: relative;
+ overflow:hidden
+}
+.sub-page .img div.title{
+ position: absolute;
+ width: 100%;
+ top:30px;
+ padding-top: 0;
+ height: auto;
+ z-index: 2;
+ overflow: hidden;
+
+}
+.sub-page .img div.title p{
+ color:#ff5552;
+ font-size: 22px;
+ font-family:'NanumSquare', sans-serif !important;
+ transform: translate3d( 0, 100px, 0 );
+transition: transform .3s;
+
+}
+.sub-page .img div.title p.active{
+ color:#ff5552;
+ font-size: 22px;
+ font-family:'NanumSquare', sans-serif !important;
+ transform: translate3d( 0, 0, 0 );
+transition: transform .3s;
+transition-duration:1s;
+
+}
+.sub-page .img div.title span{
+ font-weight: 100;
+
+}
+.sub-page .img div.summary{
+ position: absolute;
+ width: 100%;
+ top:95px;
+ padding-top: 0;
+ height: auto;
+ z-index: 2;
+ overflow: hidden;
+
+}
+.sub-page .img div.summary p{
+ color:#fff;
+ font-size: 20px;
+transform: translate3d( 0, -100px, 0 );
+transition: transform .3s;
+
+}
+.sub-page .img div.summary p.active{
+ color:#fff;
+ font-size: 13px;
+transform: translate3d( 0, 0, 0 );
+transition: transform .3s;
+transition-duration:1s;
+ width: 220px;
+ margin: 0 auto
+}
+.sub-page .img span.line{
+ background-color: rgba(255,85,82,.7);
+ width: 1200px;
+ height: 1px;
+ display: block;
+ margin: 0 auto;
+ position: absolute;
+ top:80px;
+ left: 50%;
+ margin-left: -600px;
+ z-index: 2;
+ display: none;
+
+}
+
+.sub-page .img div.img-1{
+ position: absolute;
+ bottom:-30px;
+ z-index: 1;
+ left: 0px;
+ background-image: linear-gradient(to bottom, rgba(0,0,0,1) 100%, white 0%), url(../../../img/layout/sub/img-1-0.png);
+ background-position: 50% 50%;
+ background-blend-mode:overlay;
+ min-width: 600px;
+ height: 200px;
+ opacity:.25;
+ transform: translate3d( 0, 0, 0 );
+transform: scale(1);
+transition: transform .3s;
+ width: 100%
+}
+.sub-page .img div.img-2{
+ position: absolute;
+ top:0px;
+ z-index: 0;
+ width: 100%;
+ left: -50px;
+ background-image:url(../../../img/layout/sub/img-1-1.jpg);
+ background-position: 50% 50%;
+ min-width: 600px;
+ height: 200px;
+
+opacity:1;
+ transform: translate3d( 0, 0, 0 );
+transform: scale(1);
+transition: transform .3s;
+ background-size: cover
+}
+.sub-page .img div.img-2-1{
+ position: absolute;
+ top:0px;
+ z-index: 0;
+ width: 100%;
+ left: -50px;
+ background-image:url(../../../img/layout/sub/img-2.jpg);
+ background-position: 50% 50%;
+ min-width: 600px;
+ height: 200px;
+
+opacity:1;
+ transform: translate3d( 0, 0, 0 );
+transform: scale(1);
+transition: transform .3s;
+ background-size: cover;
+ background-attachment: fixed;
+
+}
+.sub-page .img div.img-2-2{
+ position: absolute;
+ bottom:-30px;
+ z-index: 1;
+ left: 0px;
+ background-image:  url(../../../img/layout/sub/img-2-0.png);
+ background-position:0 0;
+ background-blend-mode:overlay;
+ min-width: 600px;
+ height: 200px;
+ opacity:1;
+ transform: translate3d( 0, 0, 0 );
+transform: scale(1);
+transition: transform .3s;
+ width: 100%
+}
+.sub-page .img div.img-2-3{
+ position: absolute;
+ top:0px;
+ z-index: 0;
+ width: 100%;
+ left: -50px;
+ background-image:url(../../../img/layout/sub/img-2-2.jpg);
+ background-position: 50% 50%;
+ min-width: 600px;
+ height: 200px;
+
+opacity:1;
+ transform: translate3d( 0, 0, 0 );
+transform: scale(1);
+transition: transform .3s;
+ background-size: cover;
+ background-attachment: fixed;
+
+}
+.sub-page .img div.img-2-4{
+ position: absolute;
+ top:0px;
+ z-index: 0;
+ width: 100%;
+ left: -50px;
+ background-image:url(../../../img/layout/sub/img-2-3.jpg);
+ background-position: 50% 50%;
+ min-width: 600px;
+ height: 200px;
+
+opacity:1;
+ transform: translate3d( 0, 0, 0 );
+transform: scale(1);
+transition: transform .3s;
+ background-size: cover;
+ background-attachment: fixed;
+
+}
+
+.sub-page .img div.img-3{
+ position: absolute;
+ top:0px;
+ z-index: 0;
+ width: 100%;
+ left: -50px;
+ background-image:url(../../../img/layout/sub/img-3.jpg);
+ background-position: 50% 50%;
+ min-width: 600px;
+ height: 200px;
+
+opacity:1;
+ transform: translate3d( 0, 0, 0 );
+transform: scale(1);
+transition: transform .3s;
+ background-size: cover
+}
+.sub-page .img div.img-4{
+ position: absolute;
+ top:0px;
+ z-index: 0;
+ width: 100%;
+ left: -50px;
+ background-image:url(../../../img/layout/sub/img-4.jpg);
+ background-position: 50% 50%;
+ min-width: 600px;
+ height: 200px;
+
+opacity:1;
+ transform: translate3d( 0, 0, 0 );
+transform: scale(1);
+transition: transform .3s;
+ background-size: cover
+}
+.sub-page .img div.img-5{
+ position: absolute;
+ top:0px;
+ z-index: 0;
+ width: 100%;
+ left: -50px;
+ background-image:url(../../../img/layout/sub/img-5.jpg);
+ background-position: 50% 50%;
+ min-width: 600px;
+ height: 200px;
+
+opacity:1;
+ transform: translate3d( 0, 0, 0 );
+transform: scale(1);
+transition: transform .3s;
+ background-size: cover
+}
+
+.sub-page .img.active div.img-1{
+transform: translate3d( -20px, -10px, 0 ) scale(1.04);
+transition: transform .3s;
+}
+.sub-page .img.active div.img-2{
+transform: translate3d( 20px, 10px, 0 ) scale(1.1);
+transition: transform .3s;
+}
+.sub-page .img.active div.img-3{
+transform: scale(1.1);
+transition: transform .3s;
+}
+.sub-page .img.active div.img-4{
+transform: scale(1.1);
+transition: transform .3s;
+}
+.sub-page .img.active div.img-5{
+transform: scale(1.1);
+transition: transform .3s;
+}
+
+	
+	.modal-dialog{width:100%!important; margin: 0!important}
+.modal-content{
+ border-radius: 2px;
+
+}
+.modal-content .sns {
+text-align: center
+}
+.modal-content .sns i{
+ border: 1px solid #ddd;
+ border-radius: 3px;
+ padding: 15px;
+ font-size: 24px;
+ margin: 10px;
+ color:#646672;
+
+}
+
+}
