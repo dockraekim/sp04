@@ -6,17 +6,25 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.netchus.service.SensorService;
+
+
 
 /**
  * Handles requests for the application home page.
  */
 @Controller
 public class HomeController {
-
+	
+	@Autowired
+	private SensorService sservice;
+	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
 	/**
@@ -36,11 +44,48 @@ public class HomeController {
 		return "home";
 	}
 
-	@RequestMapping(value = "/ex_list", method = RequestMethod.GET)
-	public String list(Model model) {
-		logger.info("list");
+	/*
+	 * 실습1 - 리스트 작성
+	 * DB에서 조회 후 해당 데이터 출력 
+	 */
+	@RequestMapping(value = "/ex1", method = RequestMethod.GET)
+	public String ex1(Model model) {
+		logger.info("ex1");
 
-		return "list";
+		return "ex1";
 	}
+	/*
+	 *  DB에서 조회 후 해당 데이터 출력 
+	 */
+	@RequestMapping(value = "/dataList1", method = RequestMethod.GET)
+	public String dataList1(Model model) {
+		logger.info("dataList1");
+		model.addAttribute("sensorList", sservice.getSensorList());
+		return "dataList1";
+	}
+	/*
+	 *  DB에서 조회 후 해당 데이터 출력 
+	 */
+	@RequestMapping(value = "/dataList2", method = RequestMethod.GET)
+	public String dataList2(Model model) {
+		logger.info("dataList2");
+		//sservice.getVOList();
+		//sservice.getSensorData("1");
+		model.addAttribute("sensorList", sservice.getVOList());
+		return "dataList2";
+	}
+	/*
+	 *  DB에서 조회 후 해당 데이터 출력 
+	 */
+	@RequestMapping(value = "/getData", method = RequestMethod.GET)
+	public String getData(Model model) {
+		logger.info("getData");
+		//sservice.getSensorData("1");
+		model.addAttribute("sInfo", sservice.getSensorData("1"));
+		return "getData";
+	}
+	
+	
+	
 
 }

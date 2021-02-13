@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.rog//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.netchus.mapper.EnvironmentMapper">
+<resultMap type="com.netchus.vo.EnvironmentVO" id="EnvVO">
+		<result property="id" column="id" />
+		<result property="SO2" column="so2" />   
+		<result property="CO" column="co" />   	
+		<result property="NO2" column="no2" />   	
+		<result property="PM10" column="pm10" />   	
+		<result property="PM25" column="pm2_5" />   	
+		<result property="PM1" column="pm1" />   	
+		<result property="TC" column="tc" />   	
+		<result property="useFlag" column="use_flag" />   	
+		<result property="H" column="h" />   	
+		<result property="sensorId" column="sId" />
+		<result property="dataTime" column="data_time" />
+		<result property="regDate" column="reg_date" />
+</resultMap>
+
+<select id="getVOList" resultMap="EnvVO">
+ 	<![CDATA[
+	SELECT  *
+	FROM SensorData
+	ORDER BY reg_date DESC
+	limit 10
+	]]>
+</select>
+
+<select id="getList" resultType="hashMap">
+ 	<![CDATA[
+	SELECT  id, pm1, pm2_5, pm10
+	FROM SensorData
+	ORDER BY reg_date DESC
+	limit 10
+	]]>
+</select>
+
+<select id="get" resultType="hashMap">
+ 	<![CDATA[
+	SELECT *
+	FROM SensorData
+	WHERE id = #{sensorId}
+	]]>
+</select>
+	
+</mapper>	
