@@ -26,16 +26,12 @@ import com.netchus.service.EnvironmentService;
 public class HomeController {
 	
 	//@Autowired
-	//private SensorService sservice;
-	//@Autowired
 	private EnvironmentService envService;
-	
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
 	@Autowired
 	public HomeController(EnvironmentService envService) {
-		super();
 		this.envService = envService;
 	}
 	
