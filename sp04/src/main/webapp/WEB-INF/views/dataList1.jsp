@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,20 +45,21 @@
 					<tbody>
 						<c:forEach items="${sensorList}" var="sensorList" varStatus="vs">
 					    <tr>
-					        <td>${sensorList.PM1}</td>
-					        <td>${sensorList.PM25}</td>
-					        <td>${sensorList.PM10}</td>
+					        <td>${sensorList.pm1}</td>
+					        <td>${sensorList.pm2_5}</td>
+					        <td>${sensorList.pm10}</td>
 					    </tr>
 					    </c:forEach>
 					</tbody>
 				</table>
-				
+				<!-- 
 				<p class="pagination" style="margin-top:20px;">
 					<a class="arr" ><i class="xi-angle-left"></i></a>
 					<a class="num active" >1</a>
 					<a class="num" >2</a>
 					<a class="arr" ><i class="xi-angle-right"></i></a>
 				</p>
+				 -->
 			</div>
 		</div>
 </div>					

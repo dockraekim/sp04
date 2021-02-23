@@ -13,7 +13,7 @@
 	<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
 	<property name="url" value="jdbc:mysql://127.0.0.1:3306/mydb?useSSL=false"></property>
 	<property name="username" value="root"></property>
-	<property name="password" value="mydb01"></property>
+	<property name="password" value="mydb1234"></property>
 	</bean>
 	
 	 <!-- mybatis SqlSessionFactoryBean -->
