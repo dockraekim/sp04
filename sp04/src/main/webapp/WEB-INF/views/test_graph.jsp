@@ -17,36 +17,28 @@
 
             var chartData = [
                 {
-                    "country": "United States",
-                    "visits": 9252
+                    "name": "PM2.5",
+                    "value": "${list[0].pm2_5}"
                 },
                 {
-                    "country": "China",
-                    "visits": 1882
+                    "name": "PM10",
+                    "value": "${list[0].pm10}"
                 },
                 {
-                    "country": "Japan",
-                    "visits": 1809
+                    "name": "CO",
+                    "value": "${list[0].co}"
                 },
                 {
-                    "country": "Germany",
-                    "visits": 1322
+                    "name": "SO2",
+                    "value": "${list[0].so2}"
                 },
                 {
-                    "country": "United Kingdom",
-                    "visits": 1122
+                    "name": "NO2",
+                    "value": "${list[0].no2}"
                 },
                 {
-                    "country": "France",
-                    "visits": 1114
-                },
-                {
-                    "country": "India",
-                    "visits": 984
-                },
-                {
-                    "country": "Spain",
-                    "visits": 711
+                    "name": "O3",
+                    "value": "${list[0].o3}"
                 }
             ];
 
@@ -56,11 +48,11 @@
                 chart = new AmCharts.AmPieChart();
 
                 // title of the chart
-                chart.addTitle("Visitors countries", 16);
+                chart.addTitle("대기환경 오염인자 / ${list[0].pm2_5}", 16);
 
                 chart.dataProvider = chartData;
-                chart.titleField = "country";
-                chart.valueField = "visits";
+                chart.titleField = "name";
+                chart.valueField = "value";
                 chart.sequencedAnimation = true;
                 chart.startEffect = "elastic";
                 chart.innerRadius = "30%";

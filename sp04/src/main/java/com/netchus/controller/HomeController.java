@@ -60,9 +60,38 @@ public class HomeController {
 	@RequestMapping(value = "/ex1", method = RequestMethod.GET)
 	public String ex1(Model model) {
 		logger.info("ex1");
+		
+		//ApiExplorer apiExplorer = new ApiExplorer(); //객체 생성	
+		//String result = apiExplorer.apiCall(); //API 호출
+		//apiExplorer.makeJsonData(result); //API JSON 데이터를 파싱 해서 arraylist에 담는 과정 
+		
+		//model.addAttribute("list", envService.getList());
+		model.addAttribute("list", envService.get());
 
 		return "ex1";
 	}
+	
+	
+	@RequestMapping(value="/ex2", method=RequestMethod.GET)
+	public String ex2(Model model) {
+		logger.info("ex2");
+		
+		ApiExplorer apiExplorer = new ApiExplorer();
+		String result = apiExplorer.apiCall();
+		ArrayList<HashMap<String, Object>> arrayList = apiExplorer.makeJsonData(result);
+		
+		System.out.println(" arraylist length : "+ arrayList.size());
+		
+		HashMap<String, Object> map = arrayList.get(0); //첫번째 번지수 데이터를 호출
+		
+		envService.insertSensor(map); //insert 
+		
+		model.addAttribute("list", envService.getList()); //Environment 테이블을 전체 조회 
+		
+		return "ex2";
+	}
+	
+	
 	/*
 	 *  DB에서 조회 후 해당 데이터 출력 
 	 */
@@ -126,8 +155,9 @@ public class HomeController {
 	@RequestMapping(value = "/graph", method = RequestMethod.GET)
 	public String graph(Model model) {
 		logger.info("graph");
-		//sservice.getSensorData("1");
-		//model.addAttribute("sInfo", sservice.getSensorData("1"));
+		
+		//model.addAttribute("list", envService.get()); //그래프 조회 
+		model.addAttribute("list", envService.getAVG()); //그래프 조회 
 		return "test_graph";
 	}
 	

@@ -30,6 +30,14 @@ public class EnvironmentService {
 	}
 
 	
+	public ArrayList<HashMap<String, Object>> get(){
+		return mapper.get();
+	}
+	
+	public ArrayList<HashMap<String, Object>> getAVG(){
+		return mapper.getAVG();
+	}
+	
 	
 	
 //	@Override

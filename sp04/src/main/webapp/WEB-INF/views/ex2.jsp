@@ -38,6 +38,8 @@
 					<thead>
 						<tr>
 							<th>데이터 아이디</th>
+							<th>데이터 타입</th>
+							<th>등록	시간</th>
 							<th>발표시간</th>
 							<th>PM1.0</th>
 							<th>PM2.5</th>
@@ -52,6 +54,8 @@
 						<c:forEach var="result" items="${list }">
 						<tr>
 							<td>${result.id }</td>
+							<td>${result.env_type }</td>
+							<td>${result.reg_date }</td>
 							<td>${result.data_time }</td>
 							<td>${result.pm1 }</td>
 							<td>${result.pm2_5 }</td>

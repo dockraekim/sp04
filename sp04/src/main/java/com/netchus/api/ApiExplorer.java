@@ -17,7 +17,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class ApiExplorer {
-	private static final String SERVICE_KEY = "servicekey";
+	private static final String SERVICE_KEY = "ServiceKey";
 	
 	
 	public String apiCall(){ //api 호출 

@@ -9,5 +9,9 @@ public interface EnvironmentMapper {
 	public ArrayList<HashMap<String, Object>> getList();
 	
 	public void insertSensor(HashMap<String,Object> sensor);
+	
+	public ArrayList<HashMap<String, Object>> get();
+	
+	public ArrayList<HashMap<String, Object>> getAVG();
 
 }
